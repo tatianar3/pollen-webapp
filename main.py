@@ -3,7 +3,7 @@ import json
 import requests
 import pandas as pd
 
-api_key = "AIzaSyDo1oCgpOyprr2WlprJU8xNTOVka5K_SOQ"
+api_key = "enter-api-key-here"
 # https://pollen.googleapis.com/v1/forecast:lookup?key=YOUR_API_KEY
 
 
