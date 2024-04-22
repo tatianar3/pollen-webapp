@@ -116,7 +116,7 @@ if category == "Current Forecast Data" or category == "Pollen Plant Descriptions
         response = requests.get(url)
         if response.status_code == 200:
             basic_data = json.loads(response.text)
-            st.success("Your request was successful!")
+            st.success(f"Your request was successful! Displaying data for {basic_data.get('regionCode', 'your location.')}")
             if category == "Current Forecast Data":
                 tab1, tab2, tab3 = st.tabs(["Data Frame", "Bar Graph", "Line Graph"])
                 with tab1:
@@ -190,6 +190,12 @@ if category == "Current Forecast Data" or category == "Pollen Plant Descriptions
                         use_container_width=True,
                     )
 
+                expander = st.expander("Read about Cross Reaction")
+                expander.write("Cross-reactivity in allergic reactions occurs when the proteins in one substance "
+                               "(typically pollen) are similar to the proteins found in another substance (typically a food)."
+                               "For example, if you are allergic to birch tree pollen, you may also find that eating "
+                               "apples causes a reaction for you. Certain tree nuts also demonstrate cross-reactivity.")
+                
         else:
             st.error("Error in getting forecast data. Please check your input and try again.")
 
