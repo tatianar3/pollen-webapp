@@ -194,7 +194,8 @@ if category == "Current Forecast Data" or category == "Pollen Plant Descriptions
                 expander.write("Cross-reactivity in allergic reactions occurs when the proteins in one substance "
                                "(typically pollen) are similar to the proteins found in another substance (typically a food)."
                                "For example, if you are allergic to birch tree pollen, you may also find that eating "
-                               "apples causes a reaction for you. Certain tree nuts also demonstrate cross-reactivity.")
+                               "apples causes a reaction for you. Certain tree nuts also demonstrate cross-reactivity.\n"
+                               "(Source: https://www.aaaai.org/tools-for-the-public/allergy,-asthma-immunology-glossary/cross-reactivity-defined)")
                 
         else:
             st.error("Error in getting forecast data. Please check your input and try again.")
