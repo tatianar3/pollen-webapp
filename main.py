@@ -105,7 +105,7 @@ def getWeedPlants():
 
 category = st.sidebar.selectbox("Choose a category:", ("Current Forecast Data", "Pollen Plant Descriptions", "Feedback Form"))
 
-st.title("Pollen Web App")
+st.title("Pollen Detector")
 
 if category == "Current Forecast Data" or category == "Pollen Plant Descriptions":
     st.subheader("Find the pollen forecast in your area")
